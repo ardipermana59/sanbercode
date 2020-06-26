@@ -1,0 +1,78 @@
+SOAL NO 1
+
+CREATE DATABASE myshop;
+
+SOAL NO 2
+
+	Table users
+
+	CREATE TABLE users (
+		id INT PRIMARY KEY AUTO_INCREMENT,
+		name VARCHAR(255),
+		email VARCHAR(255),
+		password VARCHAR(255)
+	);
+
+	Table items
+
+	CREATE TABLE items (
+		id INT PRIMARY KEY AUTO_INCREMENT, 
+		name VARCHAR(255),
+		description VARCHAR(255),
+		price INT,
+		stock INT,
+		category_id INT,
+		FOREIGN KEY (category_id) REFERENCES categories(id)
+	);
+
+
+	Table categories
+
+	CREATE TABLE categories (
+		id INT PRIMARY KEY AUTO_INCREMENT,
+		name VARCHAR(255)
+	);
+
+
+SOAL NO 3
+
+	Table users
+
+	INSERT INTO users VALUES ('','John Doe','john@doe.com','john123');
+	INSERT INTO users VALUES ('','Jane Doe','jane@doe.com','jenita123');
+
+	Table categories
+
+	INSERT INTO categories (name) VALUES ('gadget');
+	INSERT INTO categories (name) VALUES ('cloth');
+	INSERT INTO categories (name) VALUES ('men');
+	INSERT INTO categories (name) VALUES ('women');
+	INSERT INTO categories (name) VALUES ('branded');
+
+	Table items
+
+	INSERT INTO items VALUES ('','Sumsang b50','hape keren dari merek sumsang', 4000000, 100, 1);
+	INSERT INTO items VALUES ('','Uniklooh','baju keren dari brand ternama', 500000, 50, 2);
+	INSERT INTO items VALUES ('','IMHO Watch','jam tangan anak yang jujur banget', 2000000, 10, 1);
+
+
+SOAL NO 4
+
+a. SELECT id, name, email FROM users;
+
+b. SELECT * FROM items WHERE price > 1000000;
+
+	SELECT * FROM items WHERE name LIKE '%watch%';
+
+c. SELECT items.name, items.description, items.price, items.stock, items.category_id, categories.name FROM items INNER JOIN categories ON items.category_id = categories.id;
+
+
+
+SOAL NO 5
+
+// Spesifik update
+UPDATE items SET price = 2500000 WHERE name = 'Sumsang b50';
+
+// update semua yang punya nama sumsang seperti di soal
+
+UPDATE items SET price = 2500000 WHERE name LIKE '%sumsang%';
