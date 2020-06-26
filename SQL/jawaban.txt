@@ -38,7 +38,7 @@ SOAL NO 3
 
 	Table users
 
-	INSERT INTO users VALUES ('','John Doe','john@doe.com','john123'), ;
+	INSERT INTO users VALUES ('','John Doe','john@doe.com','john123');
 	INSERT INTO users VALUES ('','Jane Doe','jane@doe.com','jenita123');
 
 	OR 
