@@ -75,7 +75,7 @@ b. SELECT * FROM items WHERE price > 1000000;
 
 	SELECT * FROM items WHERE name LIKE '%watch%';
 
-c. SELECT items.name, items.description, items.price, items.stock, items.category_id, categories.name FROM items INNER JOIN categories ON items.category_id = categories.id;
+c. 	SELECT items.name, items.description, items.price, items.stock, items.category_id, categories.name AS kategori FROM items INNER JOIN categories ON items.category_id = categories.id;
 
 
 
